@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "live-server": "^1.2.2",
+    "sass": "^1.56.0"
+  },
+  "scripts": {
+    "start": "live-server",
+    "style": "sass --watch sass/style.scss style.css"
+  }
+}
