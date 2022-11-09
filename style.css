@@ -106,4 +106,26 @@ input {
   border-radius: 0;
 }
 
+.button {
+  background-color: transparent;
+  border: 3px solid #ffffff;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.main-grid {
+  display: grid;
+  grid: "header header header" 1fr/1fr;
+}
+
+.header {
+  display: grid;
+  place-content: center;
+  grid-area: header;
+  background: linear-gradient(0deg, #fce38a 0%, #f38181 100%);
+}
+.header__subtitle, .header__title {
+  color: #ffffff;
+}
+
 /*# sourceMappingURL=style.css.map */

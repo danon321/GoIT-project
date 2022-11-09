@@ -1,0 +1,12 @@
+.header {
+    display: grid;
+    place-content: center;
+    grid-area: header;
+
+    background: $gradient-primary;
+
+    &__subtitle,
+    &__title {
+        color: $font-color-secondary;
+    }
+}
