@@ -106,11 +106,55 @@ input {
   border-radius: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+.title, .subtitle {
+  color: #333333;
+  text-align: center;
+}
+
+.title {
+  font-size: 30px;
+  font-family: Montserrat, Verdana, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -5px;
+}
+
+.subtitle {
+  font-size: 24px;
+  font-family: "Kaushan Script", "Brush Script M7", sans-serif;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .button {
+  width: fit-content;
+  height: fit-content;
   background-color: transparent;
   border: 3px solid #ffffff;
+  padding: 10px 30px;
+  transition: background-color 0.4s, border-color 0.4s;
   color: #ffffff;
+  font-family: Montserrat, Verdana, sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  .button {
+    padding: 7px 20px;
+    font-size: 12px;
+  }
+}
+.button:hover {
+  background-color: #f38181;
+  border-color: #f38181;
 }
 
 .main-grid {
@@ -119,19 +163,84 @@ input {
 }
 
 .header {
+  position: relative;
   display: grid;
-  place-content: center;
+  grid: "subtitle" 1fr "title" 2fr "button" 1fr/1fr;
+  justify-items: center;
   grid-area: header;
   background: linear-gradient(0deg, #fce38a 0%, #f38181 100%);
+  padding-top: 200px;
+  padding-bottom: 225px;
+  z-index: 0;
+}
+@media (max-width: 992px) {
+  .header {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+}
+@media (max-width: 576px) {
+  .header {
+    gap: 10px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+.header::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/images/vulture.png");
+  opacity: 0.1;
+  z-index: -1;
+}
+@media (max-width: 992px) {
+  .header::after {
+    background-position: center;
+  }
 }
 .header__subtitle, .header__title {
   color: #ffffff;
 }
 .header__title {
-  font-family: Montserrat, Verdana, sans-serif;
+  grid-area: title;
+  align-self: center;
+  max-width: 850px;
+  font-size: 150px;
+  line-height: 140px;
+}
+@media (max-width: 992px) {
+  .header__title {
+    font-size: 100px;
+    line-height: 110px;
+  }
+}
+@media (max-width: 576px) {
+  .header__title {
+    font-size: 50px;
+    line-height: 50px;
+    letter-spacing: 0px;
+  }
 }
 .header__subtitle {
-  font-family: "Kaushan Script", "Brush Script M7", sans-serif;
+  grid-area: subtitle;
+  align-self: center;
+  font-size: 72px;
+}
+@media (max-width: 992px) {
+  .header__subtitle {
+    font-size: 54px;
+  }
+}
+@media (max-width: 576px) {
+  .header__subtitle {
+    font-size: 34px;
+  }
+}
+.header__button {
+  grid-area: button;
+  align-self: end;
 }
 
 /*# sourceMappingURL=style.css.map */
