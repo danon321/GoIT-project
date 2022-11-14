@@ -1,0 +1,27 @@
+.button {
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+    border: 3px solid $button-border-color;
+    padding: 10px 30px;
+    
+    transition: background-color .4s, border-color .4s;
+
+    color: $button-font-color;
+    font-family: $font-family-primary;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    @media (max-width: $breakpoint-sm) {
+        padding: 7px 20px;
+
+        font-size: 12px;
+    }
+    
+    &:hover {
+        background-color: $color-primary;
+        border-color: $color-primary;
+    }
+}
