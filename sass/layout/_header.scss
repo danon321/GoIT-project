@@ -9,4 +9,12 @@
     &__title {
         color: $font-color-secondary;
     }
+
+    &__title {
+        font-family: $font-family-primary;
+    }
+
+    &__subtitle {
+        font-family: $font-family-tertiary;
+    }
 }

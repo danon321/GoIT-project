@@ -127,5 +127,11 @@ input {
 .header__subtitle, .header__title {
   color: #ffffff;
 }
+.header__title {
+  font-family: Montserrat, Verdana, sans-serif;
+}
+.header__subtitle {
+  font-family: "Kaushan Script", "Brush Script M7", sans-serif;
+}
 
 /*# sourceMappingURL=style.css.map */
