@@ -1,4 +1,5 @@
 .main-grid {
     display: grid;
-    grid: 'header header header' 1fr / 1fr;
+    grid: '... nav ...' 0 
+    'header header header' 1fr / minmax(15px, 1fr) minmax(auto, 1200px) minmax(15px, 1fr);
 }

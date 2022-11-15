@@ -1,7 +1,7 @@
 @import 'abstracts/variables';
 
-@import 'base/reset', 'base/typography', 'base/global';
+@import 'base/reset', 'base/typography';
 
 @import 'components/buttons';
 
-@import 'layout/grid', 'layout/header';
+@import 'layout/grid', 'layout/header', 'layout/navigation';
