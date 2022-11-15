@@ -110,7 +110,8 @@ a {
   text-decoration: none;
 }
 
-.title, .subtitle {
+.title,
+.subtitle {
   color: #333333;
   text-align: center;
 }
@@ -120,12 +121,51 @@ a {
   font-family: Montserrat, Verdana, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: -5px;
+}
+@media (max-width: 576px) {
+  .title {
+    font-size: 25px;
+  }
+}
+.title--big {
+  font-size: 150px;
+  line-height: 140px;
+}
+@media (max-width: 992px) {
+  .title--big {
+    font-size: 100px;
+    line-height: 110px;
+  }
+}
+@media (max-width: 576px) {
+  .title--big {
+    font-size: 50px;
+    line-height: 50px;
+    letter-spacing: 0px;
+  }
 }
 
 .subtitle {
   font-size: 24px;
   font-family: "Kaushan Script", "Brush Script M7", sans-serif;
+}
+@media (max-width: 576px) {
+  .subtitle {
+    font-size: 18px;
+  }
+}
+.subtitle--big {
+  font-size: 72px;
+}
+@media (max-width: 992px) {
+  .subtitle--big {
+    font-size: 54px;
+  }
+}
+@media (max-width: 576px) {
+  .subtitle--big {
+    font-size: 34px;
+  }
 }
 
 .button {
@@ -152,9 +192,65 @@ a {
   border-color: #f38181;
 }
 
+.boxes-icon-info {
+  display: grid;
+  grid: 1fr/repeat(3, 1fr);
+  gap: 80px 60px;
+  padding: 20px 30px;
+}
+@media (max-width: 992px) {
+  .boxes-icon-info {
+    grid: 1fr/repeat(2, 1fr);
+    gap: 50px 40px;
+    padding: 10px 15px;
+  }
+}
+@media (max-width: 576px) {
+  .boxes-icon-info {
+    grid: 1fr/repeat(1, 1fr);
+    gap: 25px;
+    padding: 0;
+  }
+}
+.boxes-icon-info__box {
+  display: grid;
+  grid: "box-icon box-title" auto "boc-icon box-desc" 1fr/auto 1fr;
+  gap: 0 20px;
+}
+@media (max-width: 576px) {
+  .boxes-icon-info__box {
+    grid: "box-icon" auto "box-title" auto "box-desc" 1fr/1fr;
+    justify-items: center;
+    gap: 15px;
+  }
+}
+.boxes-icon-info__icon {
+  grid-area: box-icon;
+}
+.boxes-icon-info__title {
+  grid-area: box-title;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: Montserrat, Verdana, sans-serif;
+  color: #333333;
+  text-transform: uppercase;
+}
+.boxes-icon-info__desc {
+  grid-area: box-desc;
+  font-size: 15px;
+  font-family: Roboto, Georgia, sans-serif;
+  color: #999999;
+  line-height: 24px;
+}
+@media (max-width: 576px) {
+  .boxes-icon-info__desc {
+    text-align: center;
+  }
+}
+
 .main-grid {
   display: grid;
-  grid: "... nav ..." 0 "header header header" 1fr/minmax(15px, 1fr) minmax(auto, 1200px) minmax(15px, 1fr);
+  grid: "... nav ..." 0 "header header header" 1fr "... services ..."/minmax(15px, 1fr) minmax(auto, 1200px) minmax(15px, 1fr);
 }
 
 .header {
@@ -183,7 +279,7 @@ a {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("../../assets/images/vulture.png");
+  background: url("../../assets/images/vulture.png") no-repeat center;
   opacity: 0.1;
   z-index: -1;
 }
@@ -198,37 +294,17 @@ a {
 .header__title {
   grid-area: title;
   align-self: center;
+  letter-spacing: -5px;
   max-width: 850px;
-  font-size: 150px;
-  line-height: 140px;
-}
-@media (max-width: 992px) {
-  .header__title {
-    font-size: 100px;
-    line-height: 110px;
-  }
 }
 @media (max-width: 576px) {
   .header__title {
-    font-size: 50px;
-    line-height: 50px;
     letter-spacing: 0px;
   }
 }
 .header__subtitle {
   grid-area: subtitle;
   align-self: center;
-  font-size: 72px;
-}
-@media (max-width: 992px) {
-  .header__subtitle {
-    font-size: 54px;
-  }
-}
-@media (max-width: 576px) {
-  .header__subtitle {
-    font-size: 34px;
-  }
 }
 .header__button {
   grid-area: button;
@@ -289,6 +365,47 @@ a {
 .nav__list--icons {
   grid-area: icons;
   gap: 40px;
+}
+
+.section {
+  margin: 45px 0;
+}
+@media (max-width: 576px) {
+  .section {
+    margin: 35px 0;
+  }
+}
+.section__title {
+  position: relative;
+  margin-bottom: 40px;
+}
+.section__title .title {
+  padding: 10px 0;
+}
+@media (max-width: 576px) {
+  .section__title .title {
+    padding: 7px 0;
+  }
+}
+.section__title .subtitle {
+  padding: 5px 0;
+}
+.section__title--line::after {
+  content: "";
+  display: block;
+  background-color: #f38181;
+  width: 60px;
+  height: 3px;
+  margin: 40px auto;
+}
+@media (max-width: 576px) {
+  .section__title--line::after {
+    margin: 15px auto;
+  }
+}
+
+.services {
+  grid-area: services;
 }
 
 /*# sourceMappingURL=style.css.map */

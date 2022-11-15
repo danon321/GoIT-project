@@ -2,6 +2,8 @@
 
 @import 'base/reset', 'base/typography';
 
-@import 'components/buttons';
+@import 'components/buttons', 'components/boxes-icon-info';
 
 @import 'layout/grid', 'layout/header', 'layout/navigation';
+
+@import 'sections/section', 'sections/services';
