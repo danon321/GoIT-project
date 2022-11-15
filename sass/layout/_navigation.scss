@@ -1,0 +1,66 @@
+.nav {
+    display: grid;
+    grid-area: nav;
+    grid: 'logo ... list ... icons' auto / auto minmax(20px, 1fr) auto minmax(20px, 50px) auto;
+    align-items: center;
+
+    height: fit-content;
+    background-color: transparent;
+    padding: 30px 0;
+
+    z-index: 1;
+
+    &__logo {
+        grid-area: logo;
+    }
+
+    &__list {
+        display: flex;
+        grid-area: list;
+        gap: 50px;
+
+        @media (max-width: $breakpoint-lg) {
+            display: none;
+        }
+
+        a {
+            position: relative;
+            font-size: 14px;
+            color: $font-color-secondary;
+            font-family: $font-family-primary;
+            font-weight: 400;
+            text-transform: uppercase;
+
+            transition: color .3s;
+
+            &:after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                bottom: -10px;
+                display: block;
+
+                background: none repeat scroll 0 0 transparent;
+                height: 3px;
+                width: 0;
+
+                background: $color-secondary;
+                transition: width .3s ease 0s, left .3s ease 0s;
+            }
+
+            &:hover {
+                color: $color-secondary;
+
+                &:after {
+                    width: 100%;
+                    left: 0;
+                }
+            }
+        }
+
+        &--icons {
+            grid-area: icons;
+            gap: 40px;
+        }
+    }
+}
