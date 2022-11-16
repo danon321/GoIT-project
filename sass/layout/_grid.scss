@@ -1,6 +1,7 @@
 .main-grid {
     display: grid;
     grid: '... nav ...' 0 
-    'header header header' 1fr 
-    '... services ...'/ minmax(15px, 1fr) minmax(auto, 1200px) minmax(15px, 1fr);
+    'header header header' auto 
+    '... services ...' auto
+    '... our-team ...' auto / minmax(15px, 1fr) minmax(auto, 1200px) minmax(15px, 1fr);
 }

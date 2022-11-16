@@ -1,0 +1,34 @@
+.our-team {
+    grid-area: our-team;
+
+    >.desc {
+        padding-bottom: 50px;
+
+        @media (max-width: $breakpoint-lg) {
+            padding-bottom: 30px;
+        }
+    }
+
+    .gallery {
+        &__img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            .social-media {
+                display: none;
+
+                z-index: 1;
+            }
+
+            &:hover {
+                .social-media {
+                    display: inherit;
+
+                    position: absolute;
+                }
+            }
+        }
+    }
+}

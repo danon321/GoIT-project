@@ -1,0 +1,41 @@
+.social-media {
+    display: flex;
+
+    &__icon {
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 56px;
+        height: 56px;
+        background-color: $color-secondary;
+        transition: background-color .4s;
+
+        &:hover {
+            background-color: $color-primary;
+
+            img {
+                filter: brightness(10);
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+
+            height: 100%;
+            width: 1px;
+            background-color: $color-primary;
+            opacity: 0.502;
+        }
+
+        &:last-child {
+            &::before {
+                content: none;
+            }
+        }
+    }
+}
