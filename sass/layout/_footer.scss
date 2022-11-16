@@ -1,0 +1,38 @@
+.footer {
+    grid-area: footer;
+    display: grid;
+    grid: 'footer-copyright ... footer-form' 1fr / auto 1fr auto;
+    align-items: center;
+
+    padding: 10px 0;
+    border-top: 1px solid $border-color-primary;
+
+    @media (max-width: $breakpoint-sm) {
+        grid: 'footer-form' 1fr
+        'footer-copyright' 1fr / auto;
+        gap: 10px;
+        justify-content: center;
+
+        padding: 20px 0 10px;
+    }
+
+    &__copyright {
+        grid-area: footer-copyright;
+
+        color: #000;
+        font-weight: 600;
+
+        @media (max-width: $breakpoint-sm) {
+            text-align: center;
+        }
+
+        a {
+            color: $color-primary;
+        }
+    }
+
+    &__form {
+        grid-area: footer-form;
+        display: flex;
+    }
+}

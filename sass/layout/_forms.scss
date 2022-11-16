@@ -1,0 +1,27 @@
+.form {
+    &__input {
+        border: 1px solid $border-color-primary;
+        padding: 10px;
+
+        font-size: 15px;
+        font-family: $font-family-secondary;
+
+        &::placeholder {
+            color: $form-placeholder-color;
+            font-weight: 300;
+            font-style: italic;
+        }
+    }
+
+    &__submit {
+        background-color: $form-submit-color;
+        border: none;
+        padding: 10px 30px;
+
+        font-size: 14px;
+        color: $font-color-secondary;
+        font-weight: 700;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}

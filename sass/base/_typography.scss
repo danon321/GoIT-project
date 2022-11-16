@@ -1,12 +1,16 @@
+body, a {
+    font-size: 14px;
+    font-family: $font-family-primary;
+    color: $font-color-primary;
+}
+
 .title,
 .subtitle {
-    color: $font-color-primary;
     text-align: center;
 }
 
 .title {
     font-size: 30px;
-    font-family: $font-family-primary;
     font-weight: 700;
     text-transform: uppercase;
 
