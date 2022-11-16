@@ -1,9 +1,21 @@
 @import 'abstracts/variables';
 
-@import 'base/reset', 'base/typography';
+@import 'base/reset',
+        'base/typography',
+        'base/global';
 
-@import 'components/buttons', 'components/boxes-icon-info', 'components/gallery', 'components/social-media';
+@import 'components/buttons',
+        'components/boxes-icon-info',
+        'components/gallery',
+        'components/social-media',
+        'components/hamburger';
 
-@import 'layout/grid', 'layout/header', 'layout/navigation', 'layout/forms', 'layout/footer';
+@import 'layout/grid',
+        'layout/header',
+        'layout/navigation',
+        'layout/forms',
+        'layout/footer';
 
-@import 'sections/section', 'sections/services', 'sections/our-team';
+@import 'sections/section',
+        'sections/services',
+        'sections/our-team';

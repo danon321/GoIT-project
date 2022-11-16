@@ -179,6 +179,10 @@ body, a {
   line-height: 24px;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .button {
   width: fit-content;
   height: fit-content;
@@ -343,6 +347,61 @@ body, a {
   content: none;
 }
 
+.hamburger {
+  position: relative;
+  grid-area: hamburger;
+  display: none;
+  justify-content: end;
+}
+@media (max-width: 992px) {
+  .hamburger {
+    display: flex;
+  }
+}
+.hamburger__lines {
+  display: block;
+  height: 23px;
+  width: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hamburger__line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #fff;
+}
+.hamburger__line--line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+.hamburger__line--line2 {
+  transition: transform 0.2s ease-in-out;
+}
+.hamburger__line--line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+.hamburger__input {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  opacity: 0;
+}
+.hamburger__input:checked ~ .hamburger__lines .hamburger__line--line1 {
+  transform: rotate(35deg);
+}
+.hamburger__input:checked ~ .hamburger__lines .hamburger__line--line2 {
+  transform: scaleY(0);
+}
+.hamburger__input:checked ~ .hamburger__lines .hamburger__line--line3 {
+  transform: rotate(-35deg);
+}
+
 .main-grid {
   display: grid;
   grid: "... nav ..." 0 "header header header" auto "... services ..." auto "... our-team ..." auto "... footer ..." auto/minmax(15px, 1fr) minmax(auto, 1200px) minmax(15px, 1fr);
@@ -407,6 +466,7 @@ body, a {
 }
 
 .nav {
+  position: relative;
   display: grid;
   grid-area: nav;
   grid: "logo ... list ... icons" auto/auto minmax(20px, 1fr) auto minmax(20px, 50px) auto;
@@ -415,6 +475,11 @@ body, a {
   background-color: transparent;
   padding: 30px 0;
   z-index: 1;
+}
+@media (max-width: 992px) {
+  .nav {
+    grid: "logo hamburger" auto/1fr 1fr;
+  }
 }
 .nav__logo {
   grid-area: logo;
@@ -458,6 +523,42 @@ body, a {
 .nav__list--icons {
   grid-area: icons;
   gap: 40px;
+}
+.nav--mobile {
+  display: grid;
+}
+@media (max-width: 992px) {
+  .nav--mobile {
+    position: relative;
+    grid: "logo hamburger" auto "list list" 1fr "icons icons" 1fr/1fr 1fr;
+    align-items: center;
+    height: 100vh;
+    margin: 0 -15px;
+    padding: 30px 15px;
+  }
+  .nav--mobile::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.85;
+    z-index: -1;
+  }
+  .nav--mobile .nav__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav--mobile .nav__list a {
+    font-size: 16px;
+    letter-spacing: 1.5px;
+  }
+  .nav--mobile .nav__list--icons {
+    flex-direction: row;
+    align-self: start;
+    justify-content: center;
+  }
 }
 
 .form__input {
