@@ -110,15 +110,19 @@ a {
   text-decoration: none;
 }
 
+body, a {
+  font-size: 14px;
+  font-family: Montserrat, Verdana, sans-serif;
+  color: #333333;
+}
+
 .title,
 .subtitle {
-  color: #333333;
   text-align: center;
 }
 
 .title {
   font-size: 30px;
-  font-family: Montserrat, Verdana, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -183,7 +187,6 @@ a {
   padding: 10px 30px;
   transition: background-color 0.4s, border-color 0.4s;
   color: #ffffff;
-  font-family: Montserrat, Verdana, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
@@ -236,10 +239,7 @@ a {
 }
 .boxes-icon-info__title {
   grid-area: box-title;
-  font-size: 14px;
-  font-weight: 700;
-  font-family: Montserrat, Verdana, sans-serif;
-  color: #333333;
+  font-weight: 600;
   text-transform: uppercase;
 }
 .boxes-icon-info__desc {
@@ -300,9 +300,6 @@ a {
 }
 .gallery__title {
   padding-top: 15px;
-  color: #333333;
-  font-size: 14px;
-  font-family: Montserrat, Verdana, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -348,7 +345,7 @@ a {
 
 .main-grid {
   display: grid;
-  grid: "... nav ..." 0 "header header header" auto "... services ..." auto "... our-team ..." auto/minmax(15px, 1fr) minmax(auto, 1200px) minmax(15px, 1fr);
+  grid: "... nav ..." 0 "header header header" auto "... services ..." auto "... our-team ..." auto "... footer ..." auto/minmax(15px, 1fr) minmax(auto, 1200px) minmax(15px, 1fr);
 }
 
 .header {
@@ -434,9 +431,7 @@ a {
 }
 .nav__list a {
   position: relative;
-  font-size: 14px;
   color: #ffffff;
-  font-family: Montserrat, Verdana, sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   transition: color 0.3s;
@@ -463,6 +458,62 @@ a {
 .nav__list--icons {
   grid-area: icons;
   gap: 40px;
+}
+
+.form__input {
+  border: 1px solid #e5e5e5;
+  padding: 10px;
+  font-size: 15px;
+  font-family: Roboto, Georgia, sans-serif;
+}
+.form__input::placeholder {
+  color: #cccccc;
+  font-weight: 300;
+  font-style: italic;
+}
+.form__submit {
+  background-color: #95e1d3;
+  border: none;
+  padding: 10px 30px;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.footer {
+  grid-area: footer;
+  display: grid;
+  grid: "footer-copyright ... footer-form" 1fr/auto 1fr auto;
+  align-items: center;
+  padding: 10px 0;
+  border-top: 1px solid #e5e5e5;
+}
+@media (max-width: 576px) {
+  .footer {
+    grid: "footer-form" 1fr "footer-copyright" 1fr/auto;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px 0 10px;
+  }
+}
+.footer__copyright {
+  grid-area: footer-copyright;
+  color: #000;
+  font-weight: 600;
+}
+@media (max-width: 576px) {
+  .footer__copyright {
+    text-align: center;
+  }
+}
+.footer__copyright a {
+  color: #f38181;
+}
+.footer__form {
+  grid-area: footer-form;
+  display: flex;
 }
 
 .section {

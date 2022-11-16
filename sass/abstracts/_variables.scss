@@ -24,6 +24,10 @@ $gradient-primary: linear-gradient(0deg, $color-secondary 0%, $color-primary 100
 $button-font-color: $font-color-secondary;
 $button-border-color: $font-color-secondary;
 
+//Form
+$form-submit-color: $color-tertiary;
+$form-placeholder-color: #cccccc;
+
 //Breakpoints
 $breakpoint-xs: 0;
 $breakpoint-sm: 576px;
