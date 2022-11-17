@@ -26,16 +26,13 @@ $transition-time: .4s;
 
         display: block;
 
-        width: 100%;
+        width: fit-content;
         height: 100%;
     }
 
     &__img {
-        > img {
+        img {
             display: block;
-
-            width: 100%;
-            height: 100%;
         }
 
         &--bg-color {

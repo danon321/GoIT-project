@@ -275,13 +275,11 @@ body, a {
   background-color: #95e1d3;
   position: relative;
   display: block;
-  width: 100%;
+  width: fit-content;
   height: 100%;
 }
-.gallery__img > img {
+.gallery__img img {
   display: block;
-  width: 100%;
-  height: 100%;
 }
 .gallery__img--bg-color::after {
   content: "";
@@ -580,6 +578,7 @@ body, a {
   font-size: 14px;
   color: #ffffff;
   font-weight: 700;
+  letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
 }
