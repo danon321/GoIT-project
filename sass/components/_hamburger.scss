@@ -3,7 +3,9 @@
 
     grid-area: hamburger;
     display: none;
-    justify-content: end;
+    justify-self: end;
+
+    width: min-content;
 
     @media (max-width: $breakpoint-lg) {
         display: flex;

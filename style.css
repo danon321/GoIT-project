@@ -351,7 +351,8 @@ body, a {
   position: relative;
   grid-area: hamburger;
   display: none;
-  justify-content: end;
+  justify-self: end;
+  width: min-content;
 }
 @media (max-width: 992px) {
   .hamburger {
